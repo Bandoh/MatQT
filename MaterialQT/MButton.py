@@ -7,15 +7,18 @@ from MColors import MatColors
 class MButton(QPushButton):
     def __init__(a,window,self):
         super().__init__(window)
-        self.color = MatColors['grey']
+        self.color = MatColors['black']
         self.border_radius = 0.0
         super().setStyleSheet('''
         background-color: {};
         border: 14px;
-        border-radius: 25px;
+        border-radius: {};
         padding: 20px 0;
-        *:hover
-        '''.format(self.color,"25px"))
+        color:white;
+
+        '''.format(self.color,"25px")
+        
+        )
         pass
 
 

@@ -1,8 +1,13 @@
 import sys
 import random
-from PyQt6.QtWidgets import QApplication, QLabel, QPushButton,QWidget, QVBoxLayout
+import pathlib
+from PyQt6.QtWidgets import QApplication, QLabel, QPushButton,QWidget, QVBoxLayout, QHBoxLayout
 from PyQt6.QtGui import QPixmap
-sys.path.insert(0,"C:/Users/Kelvin/Documents/PortableGit/projects/python/MatQT/MaterialQT")
+
+
+
+materialPath = str(pathlib.Path(__file__).parent.resolve())+"/MaterialQT".replace("\\","/")
+sys.path.insert(0,materialPath)
 from MColors import MatColors
 from MButton import MButton
 # from PyQt6.QtCore import Qt
@@ -10,13 +15,19 @@ from MButton import MButton
 
 app = QApplication(sys.argv)
 window = QWidget()
-window.setWindowTitle("Tral")
+window.setWindowTitle("Music Me")
+window.setFixedWidth(1024)
+window.setFixedHeight(600)
 window.setStyleSheet("background-color: {}".format(MatColors['white']))
+window.move(100,100)
 
 
-v = QVBoxLayout(window)
-btn = MButton("E", window)
+v = QHBoxLayout(window)
+btn = MButton("Click ME", window)
+btn1 = MButton("Click ME", window)
 
+v.addWidget(btn)
+v.addWidget(btn1)
 v.addWidget(btn)
 
 window.show()
