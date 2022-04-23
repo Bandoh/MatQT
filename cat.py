@@ -11,24 +11,24 @@ sys.path.insert(0,materialPath)
 from MColors import MatColors
 from MButton import MButton
 # from PyQt6.QtCore import Qt
-
+primary_color = MatColors['Dgrey']
+sec_color = MatColors["Dblue"]
+background_color = MatColors['white']
+background_color1 = MatColors['Dgrey']
 
 app = QApplication(sys.argv)
 window = QWidget()
 window.setWindowTitle("Music Me")
 # window.setFixedWidth(1224)
 # window.setFixedHeight(600)
-window.setStyleSheet("background-color: {}".format(MatColors['red']))
+window.setStyleSheet("background-color: {}".primary_color)
 window.move(100,100)
 # window.setWindowFlags(QtCore.Qt.WindowType.FramelessWindowHint)
 
 # btn = MButton("Click ME", window)
 # btn1 = MButton("Click ME", window)
 
-primary_color = MatColors['red']
-sec_color = MatColors["Dblue"]
-background_color = MatColors['white']
-background_color1 = MatColors['Dgrey']
+
 
 
 
