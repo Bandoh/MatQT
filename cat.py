@@ -1,8 +1,7 @@
 import sys
 import random
 import pathlib
-from PyQt6.QtWidgets import QApplication, QLabel, QPushButton,QWidget, QVBoxLayout, QHBoxLayout
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QApplication, QLabel,QWidget, QHBoxLayout, QLabel
 
 
 
@@ -26,9 +25,20 @@ v = QHBoxLayout(window)
 btn = MButton("Click ME", window)
 btn1 = MButton("Click ME", window)
 
-v.addWidget(btn)
-v.addWidget(btn1)
-v.addWidget(btn)
+left_section = QLabel(window)
+left_section.setStyleSheet("background-color:{};".format(MatColors['grey']))
+left_section.setFixedWidth(250)
+
+mid_section = QLabel(window)
+mid_section.setStyleSheet("background-color:{};".format(MatColors['white']))
+
+right_section = QLabel(window)
+right_section.setStyleSheet("background-color:{};".format(MatColors['white']))
+
+
+v.addWidget(left_section)
+v.addWidget(mid_section)
+v.addWidget(right_section)
 
 window.show()
 sys.exit(app.exec())
