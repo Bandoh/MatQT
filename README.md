@@ -10,4 +10,6 @@
 - Create PLaylist
 
 
-## Graphical user interface design using Figma
+## Graphical user interface 
+
+![](ui.webp)
