@@ -5,18 +5,19 @@ from MColors import MatColors
 
 
 class MButton(QPushButton):
-    def __init__(a,window,self):
-        super().__init__(window)
-        self.color = MatColors['black']
+    def __init__(self,txt,bcolor,txtcolor):
+        super().__init__(text=txt)
+        self.bcolor = bcolor
+        self.color = txtcolor
         self.border_radius = 0.0
         super().setStyleSheet('''
         background-color: {};
         border: 14px;
         border-radius: {};
         padding: 20px 0;
-        color:white;
+        color:{};
 
-        '''.format(self.color,"25px")
+        '''.format(self.bcolor,"15px",self.color)
         
         )
         pass
